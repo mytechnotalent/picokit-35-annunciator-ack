@@ -1,0 +1,68 @@
+{
+  "eyebrow": "PICOKIT // LESSON 35",
+  "title": "PICOKIT // ANNUNCIATOR ACK",
+  "subtitle": "LATCHING ALARM LED + LOCAL ACK + AUTHENTICATED HEARTBEAT",
+  "accent": "#00FFA1",
+  "dim": "#009E63",
+  "white": "#D0F6F1",
+  "cyan": "#7FD8E0",
+  "bg": "#00110B",
+  "bg_edge": "#000503",
+  "icon": "bell",
+  "panel_status": "STATE 1  ·  LED RED  ·  ACK PENDING",
+  "chips": [
+    {
+      "label": "STATE",
+      "value": "1"
+    },
+    {
+      "label": "LED",
+      "value": "red"
+    },
+    {
+      "label": "ACK",
+      "value": "button"
+    },
+    {
+      "label": "RADIO",
+      "value": "-36 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00035  seq 11  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 11",
+    "[+] annunciator latched  red LED on",
+    "[+] remote ack 0x45  latch cleared  ack sent"
+  ],
+  "categories": [
+    "ANN",
+    "LATCH",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "AN-01",
+      "label": "latch",
+      "value": "state 1"
+    },
+    {
+      "tag": "AN-02",
+      "label": "clear",
+      "value": "button"
+    },
+    {
+      "tag": "AN-03",
+      "label": "remote",
+      "value": "0x45"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  LATCH  ·  ACK  ·  RADIO  ==[ ANN ]=="
+  ],
+  "repo": "picokit-35-annunciator-ack",
+  "layout": "grid",
+  "stat": "1"
+}
